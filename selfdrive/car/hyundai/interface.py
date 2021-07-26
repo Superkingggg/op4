@@ -51,16 +51,16 @@ class CarInterface(CarInterfaceBase):
     ret.lateralTuning.indi.innerLoopGainBP = [0.]
     ret.lateralTuning.indi.innerLoopGainV = [3.1]
     ret.lateralTuning.indi.outerLoopGainBP = [0.]
-    ret.lateralTuning.indi.outerLoopGainV = [2.5]
+    ret.lateralTuning.indi.outerLoopGainV = [2.1]
     ret.lateralTuning.indi.timeConstantBP = [0.]
-    ret.lateralTuning.indi.timeConstantV = [1.3]
+    ret.lateralTuning.indi.timeConstantV = [1.4]
     ret.lateralTuning.indi.actuatorEffectivenessBP = [0.]
-    ret.lateralTuning.indi.actuatorEffectivenessV = [2.]
+    ret.lateralTuning.indi.actuatorEffectivenessV = [1.3]
 
     ret.steerRatio = 16.5
-    ret.steerActuatorDelay = 0.1
-    ret.steerLimitTimer = 2.5
-    ret.steerRateCost = 0.4
+    ret.steerActuatorDelay = 0.4
+    ret.steerLimitTimer = 0.1
+    ret.steerRateCost = 0.5
     ret.steerMaxBP = [0.]
     ret.steerMaxV = [1.5]
 
@@ -85,7 +85,7 @@ class CarInterface(CarInterfaceBase):
 
     # genesis
     if candidate == CAR.GENESIS:
-      ret.mass = 1900. + STD_CARGO_KG
+      ret.mass = 2140. + STD_CARGO_KG
       ret.wheelbase = 3.01
       ret.centerToFront = ret.wheelbase * 0.4
     elif candidate == CAR.GENESIS_G70:
